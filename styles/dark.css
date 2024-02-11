@@ -9,4 +9,27 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --text-color: #F1B2CE;
+  --background-color: #000028;
+  --main-text-color: #ff0070;
+  --heading-color: #db00ff;
+  --text-shadow: #FF0070;
+  --background-text-color: #FF0070;
+  --header-quote-color: #000028;
+  --hover-button: rgba(50, 49, 45, 0.40);
+  --background-image: url(../images/cover-image-dark.png);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #F1B2CE;
+    --background-color: #000028;
+    --main-text-color: #ff0070;
+    --heading-color: #db00ff;
+    --text-shadow: #FF0070;
+    --background-text-color: #FF0070;
+    --header-quote-color: #000028;
+    --hover-button: rgba(50, 49, 45, 0.40);
+    --background-image: url(../images/cover-image-dark.png);
+  }
 }
