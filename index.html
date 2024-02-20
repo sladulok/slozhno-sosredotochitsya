@@ -45,12 +45,12 @@
           </li>
         </ul>
       </nav>
-      <h1 class="header__heading">no focus</h1>
+      <h1 class="header_start header__heading">no focus</h1>
       <p class="header__quote title-decor">Что делать, когда не можешь делать ничего<br>
         Или почему нам так сложно сконцентрироваться, особенно когда очень надо</p>
     </header>
     <main class="main">
-      <section class="content-section">
+      <section class="content-section content-section_column">
         <h2 class="content__title">Почему сосредоточиться так сложно</h2>
         <ul class="content-card">
           <li class="content-card__item">
@@ -89,7 +89,7 @@
       </section>
       <section class="content-section">
           <h2 class="content__title">Что снижает концентрацию внимания?</h2>
-        <ul class="content-card">
+        <ul class="content-card content-card_accent">
           <li class="content-card__item">
             <h3 class="content-card__title title-decor">Многозадачность</h3>
             <p class="content-card__text">
@@ -114,7 +114,7 @@
           </li>
           <li class="content-card__item">
             <h3 class="content-card__title title-decor">Гаджеты</h3>
-            <p class="content-card__text">
+            <p class="card__text">
               Да-да, это та самая ситуация, когда на экране ноутбука — код, в
               наушниках — подкаст, а на компьютере фоном — ещё и видео с
               забавными утятами. В результате мозг пытается переключиться с
@@ -126,10 +126,10 @@
           </li>
         </ul>
       </section>
-      <section class="content-section content-section_list">
+      <section class="content-section content-section_list content-section_column">
         <h2 class="content__title">Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)</h2>
         <article>
-          <h3 class="content-card__title title-decor">5 простых (на самом деле не очень) советов</h3>
+          <h3 class="content-card__title content-card__subtitle-first title-decor">5 простых (на самом деле не очень) советов</h3>
         <ul class="content-card">
           <li class="content-card__item">
             <h4 class="content-card__subtitle title-decor">Представьте небо и облака</h4>
@@ -162,7 +162,7 @@
           </li>
           <li class="content-card__item">
             <h4 class="content-card__subtitle title-decor">Читайте</h4>
-            <p class="content-card__text">
+            <p class="card__text">
               Настоящие бумажные книги. Это правда помогает с концентрацией: чтобы прочитать пост в соцсети, достаточно нескольких минут или даже секунд. А вот интересная книга способна затянуть и на несколько часов и круто тренирует направленное внимание.
             </p>
           </li>
@@ -170,34 +170,34 @@
       </article>
       </section>
       <section class="content-section content-section_gallery">
-        <h2 class="content__subtitle title-decor">А можно в картинках?</h2>
+        <h2 class="picture__title title-decor">А можно в картинках?</h2>
         <div class="pictures">
           <img
-            class="sunset picture"
+            class="sunset_picture"
             alt="картинка заката в горах"
             loading="lazy"
             src="./images/sunset.png"
           />
           <img
-            class="ice-cream picture"
+            class="ice-cream_picture"
             alt="картинка мороженого в виде котиков"
             loading="lazy"
             src="./images/ice-cream.png"
           />
           <img
-            class="tape picture"
+            class="floppy_picture"
             alt="картинка с дискетой"
             loading="lazy"
             src="./images/tape.png"
           />
           <img
-            class="books picture"
+            class="books_picture"
             alt="картинка со стопкой книг"
             loading="lazy"
             src="./images/books.png"
           />
           <img
-            class="street picture"
+            class="street_picture"
             alt="картинка улицы"
             loading="lazy"
             src="./images/street.png"
@@ -205,6 +205,9 @@
         </div>
       </section>
     </main>
+    <footer class="footer decorated-zone">
+      <h2 class="header__heading footer__heading">focus</h2>
+    </footer>
     <script src="./scripts/script.js"></script>
   </body>
 </html>

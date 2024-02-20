@@ -18,6 +18,7 @@
   --header-quote-color: #353430;
   --hover-button: rgba(255, 0, 112, 0.40);
   --background-image: url(../images/cover-image-light.png);
+  --rec-visible: hidden;
 }
 
 @media (prefers-color-scheme: light) {
@@ -30,5 +31,7 @@
     --background-text-color: #ff8dcb;
     --header-quote-color: #353430;
     --hover-button: rgba(255, 0, 112, 0.40);
+    --background-image: url(../images/cover-image-light.png);
+    --rec-visible: hidden;
   }
 }

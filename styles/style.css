@@ -16,15 +16,15 @@
 .header {
   display: grid;
   grid-template-areas:
-  'nav'
-  'heading'
-  'quote'; 
+    "nav"
+    "heading"
+    "quote";
   min-block-size: 100vh;
   padding: 10px;
 }
 
 .decorated-zone::before {
-  content: '';
+  content: "";
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
@@ -34,31 +34,43 @@
   inset-block-start: 10px;
 }
 
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-bottom: 1px solid var(--main-text-color);
+  border-left: 1px solid var(--main-text-color);
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
+}
+
 .rec {
   position: absolute;
   display: flex;
   align-items: center;
   gap: 10px;
   text-transform: uppercase;
-  color: var(--main-text-color); 
+  color: var(--main-text-color);
   line-height: 25px;
   inset-inline-end: 19px;
   inset-block-start: 10px;
+  visibility: var(--rec-visible, visible);
 }
 
 .rec::after {
-  content: '';
+  content: "";
   border-radius: 50%;
   inline-size: 9px;
   block-size: 9px;
   background-color: var(--main-text-color);
-  filter: drop-shadow(0px 0px 4px var(--main-text-color)); 
+  filter: drop-shadow(0px 0px 4px var(--main-text-color));
 }
 
 .header__theme-menu {
   grid-area: nav;
   margin-block: 66px;
-  justify-self: flex-end;
+  justify-self: end;
 }
 
 .header__theme-menu-list {
@@ -104,7 +116,6 @@
   grid-area: quote;
   justify-self: flex-end;
   margin-block: 55px;
-  inline-size: 50%;
 }
 
 .title-decor {
@@ -117,7 +128,7 @@
   padding: 40px 10px;
 }
 
-.main__section {
+.content-section {
   display: grid;
   gap: 20px;
 }
@@ -135,6 +146,11 @@
 .content-card__title {
   font-size: 18px;
   color: var(--header-quote-color);
+  margin-block-end: 10px;
+}
+
+.content-card__text {
+  margin-block-end: 20px;
 }
 
 .content-card__text-link {
@@ -152,6 +168,12 @@
 
 .content-card__subtitle {
   color: var(--header-quote-color);
+  margin-block-end: 10px;
+  font-weight: 400;
+}
+
+.content-card__subtitle-first {
+  margin-block-end: 20px;
 }
 
 .content-section_gallery {
@@ -162,14 +184,145 @@
 .pictures {
   display: grid;
   gap: 10px;
-  width: 100%;
-  height: 100%;
 }
 
-.picture {
-  object-fit: cover;
+.picture__title {
+  font-size: 18px;
+  color: var(--header-quote-color);
+}
+
+.pictures > img {
+  position: relative;
   object-position: center;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
 }
 
+.footer {
+  min-block-size: 100vh;
+  display: flex;
+  margin-block-end: 0;
+  position: relative;
+}
+
+.footer__heading {
+  margin: auto;
+  text-shadow: 2px 2px 0 var(--text-shadow);
+}
+
+@media (width >= 768px) {
+  .header {
+    padding: 10px 10px 10px 0px;
+  }
+
+  .rec {
+    inset-inline-end: 29px;
+    inset-block-start: 20px;
+  }
+
+  .decorated-zone::after {
+    inset-inline-start: 20px;
+    inset-block-end: 20px;
+  }
+
+  .decorated-zone::before {
+    inset-inline-end: 20px;
+    inset-block-start: 20px;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 182px;
+    margin-right: 15px;
+  }
+
+  .header__quote {
+    width: 364px;
+    block-size: 34%;
+    margin-right: 10px;
+  }
+
+  .main {
+    padding: 60px 20px;
+    gap: 80px;
+  }
+
+  .content-section {
+    grid-template-columns: clamp(236px, calc(100% / 3.25), 315px) 1fr;
+  }
+
+  .content-card_accent {
+    grid-column-start: span 2;
+  }
+
+  .content-section_gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .pictures {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .sunset_picture {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  .floppy_picture {
+    grid-area: 2 / 1 / 4 / 2;
+  }
+  .books_picture {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .ice-cream_picture {
+    grid-area: 1 / 3 / 3 / 4;
+  }
+  .street_picture {
+    grid-area: 3 / 2 / 4 / 4;
+  }
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    margin-block-start: 10px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .header__theme-menu-list {
+    column-gap: 30px;
+  }
+
+  .header_start {
+    padding: 140px 0px 0px 0px;
+  }
+  .header__heading {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__quote {
+    width: 491px;
+    block-size: 28%;
+  }
+  .main {
+    gap: 60px;
+  }
+
+  .content-section_column {
+    gap: 33px;
+  }
+
+  .content-card_accent {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .content-section_list {
+    padding: 20px 0px;
+  }
+}
