@@ -3,7 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-size: 18px;
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   line-height: 1.3;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -21,6 +21,8 @@
     "quote";
   min-block-size: 100vh;
   padding: 10px;
+  position: relative;
+  align-items: start; 
 }
 
 .decorated-zone::before {
@@ -181,6 +183,7 @@
   display: grid;
   gap: 10px;
   margin-top: 20px;
+  min-height: 100%;
 }
 
 .pictures {
@@ -240,7 +243,6 @@
 
   .header__quote {
     width: 364px;
-    block-size: 34%;
     margin-right: 10px;
   }
 
@@ -310,7 +312,6 @@
 
   .header__quote {
     width: 491px;
-    block-size: 28%;
   }
   .main {
     gap: 60px;
