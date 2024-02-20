@@ -3,13 +3,14 @@
   и их переопределение под различные устройства
 */
 :root {
-  --text-color: #353430;
-  --background-color: #FFF1F7;
-  --heading-color: #FFC2E6;
-  --main-text-color: #353430;
+  --text-color: #F1B2CE;
+  --background-color: #000028;
+  --main-text-color: #ff0070;
+  --heading-color: #db00ff;
   --text-shadow: #FF0070;
-  --background-text-color: #ff8dcb;
-  --header-quote-color: #353430;
-  --hover-button: rgba(255, 0, 112, 0.40);
-  --background-image: url(../images/cover-image-light.png);
+  --background-text-color: #FF0070;
+  --header-quote-color: #000028;
+  --hover-button: rgba(50, 49, 45, 0.40);
+  --background-image: url(../images/cover-image-dark.png);
+  --rec-visible: visible;
 }
