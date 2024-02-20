@@ -30,7 +30,7 @@
     --text-shadow: #FF0070;
     --background-text-color: #FF0070;
     --header-quote-color: #000028;
-    --hover-button: rgba(50, 49, 45, 0.40);
+    --hover-button: rgba(255, 0, 112, 0.40);
     --background-image: url(../images/cover-image-dark.png);
     --rec-visible: visible;
   }

@@ -19,10 +19,10 @@
     "nav"
     "heading"
     "quote";
+  align-items: start;
   min-block-size: 100vh;
   padding: 10px;
   position: relative;
-  align-items: start; 
 }
 
 .decorated-zone::before {
@@ -85,8 +85,11 @@
 .header__theme-menu-button {
   text-transform: lowercase;
   border: none;
-  background-color: transparent;
+  background: transparent;
   line-height: 1;
+  padding: 2px 13px;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .header__theme-menu-button_active {
@@ -100,6 +103,10 @@
 
 .header__theme-menu-button:focus-visible {
   border: 1px solid var(--hover-button);
+}
+
+.header__theme-menu-button:focus {
+  outline: 0;
 }
 
 .header__heading {
@@ -183,7 +190,6 @@
   display: grid;
   gap: 10px;
   margin-top: 20px;
-  min-height: 100%;
 }
 
 .pictures {
