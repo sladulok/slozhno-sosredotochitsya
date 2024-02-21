@@ -89,12 +89,12 @@
   line-height: 1;
   padding: 2px 13px;
   cursor: pointer;
-  background-color: transparent;
+  color: var(--color-menu, #FF0070);
 }
 
 .header__theme-menu-button_active {
+  border: 1px solid var(--color-menu, #FF0070);
   pointer-events: none;
-  border: 1px solid var(--main-text-color);
 }
 
 .header__theme-menu-button:hover {
@@ -102,11 +102,12 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border: 1px solid var(--hover-button);
+  border-block-end: 1px solid currentColor;
+  outline-offset: 1px;
 }
 
 .header__theme-menu-button:focus {
-  outline: 0;
+  outline: none;
 }
 
 .header__heading {
@@ -194,7 +195,7 @@
 
 .pictures {
   display: grid;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 .picture__title {
@@ -306,7 +307,7 @@
 
   .header__theme-menu-list {
     flex-direction: row;
-    column-gap: 30px;
+    column-gap: 10px;
   }
 
   .header_start {
