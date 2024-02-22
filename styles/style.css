@@ -89,11 +89,11 @@
   line-height: 1;
   padding: 2px 13px;
   cursor: pointer;
-  color: var(--color-menu, #FF0070);
+  color: var(--color-menu, #ff0070);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--color-menu, #FF0070);
+  border: 1px solid var(--color-menu, #ff0070);
   pointer-events: none;
 }
 
@@ -195,7 +195,7 @@
 
 .pictures {
   display: grid;
-  gap: 10px; 
+  gap: 10px;
 }
 
 .picture__title {
